@@ -1,0 +1,26 @@
+#sense-images li {
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	cursor: move;
+}
+#sense-images li a.delete {
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	font-size: 9px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: rgba(0,0,0,0.5);
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	display: none;
+}
+#sense-images li:hover a.delete {
+	display: block;
+}
+.sense-uploads {
+	text-align: center;
+}

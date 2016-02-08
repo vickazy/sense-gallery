@@ -1,0 +1,136 @@
+.sense-gallery,
+.gallery-archive {
+	list-style: none;
+	padding: 0;
+}
+.grid-sizer,
+.gallery-item,
+.stamp {
+	float: left;
+}
+.grid-sizer {
+	position: absolute;
+}
+.archive-item img,
+.gallery-item img {
+	width: 100%;
+	height: auto;
+	-webkit-filter: grayscale(90%);
+	filter: grayscale(90%);
+
+	-webkit-transition: -webkit-filter 0.2s ease-in 0s;
+	transition: filter 0.2s ease-in 0s;
+}
+.archive-item:hover img,
+.gallery-item:hover img {
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+.stamp {
+	background: #f5f5f5;
+	padding: 15px;
+}
+.stamp .album-title {
+	margin: 20px 0;
+	text-transform: uppercase;
+}
+.stamp > a.all-albums {
+	margin-top: 15px;
+	margin-bottom: 20px;
+	display: block;
+}
+@media( min-width: 992px ){
+	.sense-gallery,
+	.gallery-archive {
+		margin-left: 1%;
+	}
+	.gallery-archive .grid-sizer,
+	.gallery-archive .archive-item {
+		width: 32.333%;
+		margin-bottom: 1%;
+	}
+	.stamp {
+		width: 49%;
+		margin-bottom: 1%;
+	}
+	.grid-sizer,
+	.gallery-item {
+		width: 24%;
+		margin-bottom: 1%;
+	}
+	.gutter-sizer {
+		width: 1%;
+	}
+}
+@media( max-width: 991px ){
+	.sense-gallery,
+	.gallery-archive {
+		margin-left: 2%;
+	}
+	.gallery-archive .grid-sizer,
+	.gallery-archive .archive-item {
+		width: 48%;
+		margin-bottom: 2%;
+	}
+	.stamp {
+		width: 48%;
+		margin-bottom: 2%;
+	}
+	.grid-sizer,
+	.gallery-item {
+		width: 48%;
+		margin-bottom: 2%;
+	}
+	.gutter-sizer {
+		width: 2%;
+	}
+}
+@media( max-width: 400px ){
+	.sense-gallery,
+	.gallery-archive  {
+		margin-left: 5%;
+	}
+	.gallery-archive .grid-sizer,
+	.gallery-archive .archive-item {
+		width: 95%;
+		margin-bottom: 5%;
+	}
+	.stamp {
+		width: 95%;
+		margin-bottom: 5%;
+	}
+	.grid-sizer,
+	.gallery-item {
+		width: 95%;
+		margin-bottom: 5%;
+	}
+	.gutter-sizer {
+		width: 5%;
+	}
+}
+.archive-item > figure {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+.archive-item > figure > .album-title {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin-bottom: 0;
+	padding: 15px;
+	background: rgba(0,0,0,0.5);
+
+	transform: translate3d(0,100%,0);
+	-webkit-transform: translate3d(0,100%,0);
+
+	-webkit-transition: transform 0.2s ease-in 0s;
+	transition: transform 0.2s ease-in 0s;
+}
+.archive-item > figure:hover > .album-title {
+	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+}
+.archive-item > figure > .album-title a {
+	color: #ddd;
+}
